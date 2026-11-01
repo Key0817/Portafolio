@@ -1,15 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import TechnologyIcon from "@/components/TechnologyIcon";
 import { portfolioContent, type Language } from "@/lib/data";
 
 type TabId = "experiencia" | "proyectos" | "stack" | "formacion";
 
-function Chips({ items }: { items: readonly string[] }) {
+function Chips({ items, icons = false }: { items: readonly string[]; icons?: boolean }) {
   return (
     <ul className="chips">
       {items.map((i) => (
-        <li key={i}>{i}</li>
+        <li key={i}>{icons && <TechnologyIcon name={i} />}{i}</li>
       ))}
     </ul>
   );
@@ -69,21 +70,31 @@ export default function Tabs({ language }: { language: Language }) {
 
         {active === "proyectos" && (
           <>
-            <article className="featured">
-              <h2>{copy.projects.featured.name}</h2>
-              <p>{copy.projects.featured.description}</p>
-              <ul className="points">
-                {copy.projects.featured.highlights.map((h) => (
-                  <li key={h}>{h}</li>
-                ))}
-              </ul>
-              <Chips items={copy.projects.featured.stack} />
-              {copy.projects.featured.href && (
-                <a className="link" href={copy.projects.featured.href} target="_blank" rel="noopener noreferrer">
-                  {copy.ui.viewProject}
-                </a>
-              )}
-            </article>
+            <header className="section-heading">
+              <p className="eyebrow">{copy.ui.selectedProjects}</p>
+              <p className="muted">{copy.ui.projectIntro}</p>
+            </header>
+            <div className="project-list">
+              {[copy.projects.jobhunt, copy.projects.featured].map((project, index) => (
+                <article className={`featured project-card ${index === 0 ? "project-primary" : ""}`} key={project.name}>
+                  <div className="project-heading">
+                    <span className="project-number" aria-hidden="true">0{index + 1}</span>
+                    <h2>{project.name}</h2>
+                    <span className="project-mark" aria-hidden="true">{index === 0 ? "↗" : "↘"}</span>
+                  </div>
+                  <p>{project.description}</p>
+                  <ul className="points">
+                    {project.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+                  </ul>
+                  <Chips items={project.stack} />
+                  {project.href && (
+                    <a className="link" href={project.href} target="_blank" rel="noopener noreferrer">
+                      {copy.ui.viewCode} <span aria-hidden="true">↗</span>
+                    </a>
+                  )}
+                </article>
+              ))}
+            </div>
             <h3 className="sub">{copy.ui.demos}</h3>
             <ul className="demos">
               {copy.projects.demos.map((d) => (
@@ -104,7 +115,7 @@ export default function Tabs({ language }: { language: Language }) {
               <div key={s.group}>
                 <dt>{s.group}</dt>
                 <dd>
-                  <Chips items={s.items} />
+                  <Chips items={s.items} icons />
                 </dd>
               </div>
             ))}

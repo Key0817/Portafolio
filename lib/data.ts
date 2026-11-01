@@ -51,6 +51,17 @@ export const portfolioContent = {
       },
     ],
     projects: {
+      jobhunt: {
+        name: "JobHunt",
+        description: "Aplicación para reunir ofertas de empleo tecnológico y gestionar candidaturas desde un solo lugar, con ranking explicable y documentos personalizados con IA.",
+        stack: ["React", "TypeScript", "Python", "FastAPI", "Supabase", "Gemini"],
+        highlights: [
+          "Recolección multifuente y alertas de Gmail con OAuth",
+          "Tablero de candidaturas, filtros y métricas de seguimiento",
+          "CV y cartas de presentación con IA y almacenamiento privado",
+        ],
+        href: "https://github.com/Key0817/jobhunt",
+      },
       featured: {
         name: "Extremo Sur",
         description:
@@ -61,7 +72,7 @@ export const portfolioContent = {
           "Dashboard con métricas, filtros y reportes CSV",
           "Archivos en Supabase Storage",
         ],
-        href: "",
+        href: "https://github.com/Key0817/Extremosur",
       },
       demos: [
         { name: "Front Store PK", note: "Interfaz de tienda en línea", href: "https://frontstorepk.netlify.app" },
@@ -72,7 +83,7 @@ export const portfolioContent = {
     },
     stack: [
       { group: "Frontend", items: ["Next.js", "React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Vue.js", "React Native"] },
-      { group: "Backend", items: ["Node.js", "Express.js", "C#", ".NET", "ASP.NET Core", "APIs REST", "PHP", "Java"] },
+      { group: "Backend", items: ["Node.js", "Express.js", "C#", ".NET", "ASP.NET Core", "APIs REST", "PHP", "Java", "Python"] },
       { group: "Datos", items: ["PostgreSQL", "Supabase", "SQL Server", "MySQL", "MongoDB", "Firestore"] },
       { group: "Cloud y CI/CD", items: ["Git", "GitHub Actions", "Vercel", "Google Cloud", "Azure", "Firebase"] },
       { group: "Seguridad", items: ["Autenticación", "Autorización", "Control por roles", "Row Level Security"] },
@@ -97,6 +108,11 @@ export const portfolioContent = {
         { id: "formacion", label: "Formación" },
       ],
       viewProject: "Ver proyecto",
+      viewCode: "Ver código",
+      selectedProjects: "Proyectos seleccionados",
+      projectIntro: "De la idea al producto: interfaces, datos y lógica de negocio.",
+      portfolio: "Portafolio de desarrollo",
+      contact: "Hablemos",
       demos: "Demos frontend",
       languages: "Idiomas",
       interests: "Intereses",
@@ -114,7 +130,7 @@ export const portfolioContent = {
       phone: "+(506) 8368-7759",
       linkedin: "https://www.linkedin.com/in/kpg",
       github: "https://github.com/Key0817",
-      cv: "/CV_Keylor_Palacios.pdf",
+      cv: "/CV_Keylor_Palacios_EN.pdf",
       status: "Available for full-time employment",
       download: "Download CV",
     },
@@ -153,6 +169,17 @@ export const portfolioContent = {
       },
     ],
     projects: {
+      jobhunt: {
+        name: "JobHunt",
+        description: "An application to collect tech job opportunities and manage applications in one place, with explainable ranking and AI-powered personalized documents.",
+        stack: ["React", "TypeScript", "Python", "FastAPI", "Supabase", "Gemini"],
+        highlights: [
+          "Multi-source collection and Gmail alerts with OAuth",
+          "Application board, filters and tracking metrics",
+          "AI-powered resumes and cover letters with private storage",
+        ],
+        href: "https://github.com/Key0817/jobhunt",
+      },
       featured: {
         name: "Extremo Sur",
         description:
@@ -163,7 +190,7 @@ export const portfolioContent = {
           "Dashboard with metrics, filters and CSV reports",
           "Files stored in Supabase Storage",
         ],
-        href: "",
+        href: "https://github.com/Key0817/Extremosur",
       },
       demos: [
         { name: "Front Store PK", note: "Online store interface", href: "https://frontstorepk.netlify.app" },
@@ -174,7 +201,7 @@ export const portfolioContent = {
     },
     stack: [
       { group: "Frontend", items: ["Next.js", "React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Vue.js", "React Native"] },
-      { group: "Backend", items: ["Node.js", "Express.js", "C#", ".NET", "ASP.NET Core", "REST APIs", "PHP", "Java"] },
+      { group: "Backend", items: ["Node.js", "Express.js", "C#", ".NET", "ASP.NET Core", "REST APIs", "PHP", "Java", "Python"] },
       { group: "Data", items: ["PostgreSQL", "Supabase", "SQL Server", "MySQL", "MongoDB", "Firestore"] },
       { group: "Cloud & CI/CD", items: ["Git", "GitHub Actions", "Vercel", "Google Cloud", "Azure", "Firebase"] },
       { group: "Security", items: ["Authentication", "Authorization", "Role-based access", "Row Level Security"] },
@@ -199,6 +226,11 @@ export const portfolioContent = {
         { id: "formacion", label: "Education" },
       ],
       viewProject: "View project",
+      viewCode: "View code",
+      selectedProjects: "Selected projects",
+      projectIntro: "From idea to product: interfaces, data and business logic.",
+      portfolio: "Development portfolio",
+      contact: "Let's talk",
       demos: "Frontend demos",
       languages: "Languages",
       interests: "Interests",
