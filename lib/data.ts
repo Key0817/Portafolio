@@ -51,6 +51,18 @@ export const portfolioContent = {
       },
     ],
     projects: {
+      linkshort: {
+        name: "Link Short",
+        description: "Acortador de URLs para crear, copiar y compartir enlaces cortos, con almacenamiento persistente en Firestore y redirección al destino original.",
+        stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Firestore", "Vercel"],
+        highlights: [
+          "Códigos aleatorios y creación atómica para resolver colisiones",
+          "Validación de URLs y límite de solicitudes por IP",
+          "Interfaz adaptable y accesible con copia al portapapeles",
+        ],
+        href: "https://github.com/Key0817/LinkShort",
+        liveHref: "https://link-short-k.vercel.app/",
+      },
       jobhunt: {
         name: "JobHunt",
         description: "Aplicación para reunir ofertas de empleo tecnológico y gestionar candidaturas desde un solo lugar, con ranking explicable y documentos personalizados con IA.",
@@ -169,6 +181,18 @@ export const portfolioContent = {
       },
     ],
     projects: {
+      linkshort: {
+        name: "Link Short",
+        description: "A URL shortener to create, copy and share short links, with persistent storage in Firestore and redirection to the original destination.",
+        stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Firestore", "Vercel"],
+        highlights: [
+          "Random codes and atomic creation to handle collisions",
+          "URL validation and per-IP rate limiting",
+          "Responsive, accessible interface with clipboard support",
+        ],
+        href: "https://github.com/Key0817/LinkShort",
+        liveHref: "https://link-short-k.vercel.app/",
+      },
       jobhunt: {
         name: "JobHunt",
         description: "An application to collect tech job opportunities and manage applications in one place, with explainable ranking and AI-powered personalized documents.",

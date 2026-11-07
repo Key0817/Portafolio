@@ -75,7 +75,7 @@ export default function Tabs({ language }: { language: Language }) {
               <p className="muted">{copy.ui.projectIntro}</p>
             </header>
             <div className="project-list">
-              {[copy.projects.jobhunt, copy.projects.featured].map((project, index) => (
+              {[copy.projects.jobhunt, copy.projects.featured, copy.projects.linkshort].map((project, index) => (
                 <article className={`featured project-card ${index === 0 ? "project-primary" : ""}`} key={project.name}>
                   <div className="project-heading">
                     <span className="project-number" aria-hidden="true">0{index + 1}</span>
@@ -87,11 +87,18 @@ export default function Tabs({ language }: { language: Language }) {
                     {project.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
                   </ul>
                   <Chips items={project.stack} />
-                  {project.href && (
-                    <a className="link" href={project.href} target="_blank" rel="noopener noreferrer">
-                      {copy.ui.viewCode} <span aria-hidden="true">↗</span>
-                    </a>
-                  )}
+                  <div className="project-links">
+                    {"liveHref" in project && (
+                      <a className="link" href={project.liveHref} target="_blank" rel="noopener noreferrer">
+                        {copy.ui.viewProject} <span aria-hidden="true">↗</span>
+                      </a>
+                    )}
+                    {project.href && (
+                      <a className="link" href={project.href} target="_blank" rel="noopener noreferrer">
+                        {copy.ui.viewCode} <span aria-hidden="true">↗</span>
+                      </a>
+                    )}
+                  </div>
                 </article>
               ))}
             </div>
