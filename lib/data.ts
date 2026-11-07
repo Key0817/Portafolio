@@ -18,7 +18,7 @@ export const portfolioContent = {
     },
     experience: [
       {
-        company: "Arenal Factura",
+        company: "J&G Soluciones",
         role: "Desarrollador Backend · Práctica empresarial supervisada",
         period: "Ago. 2025 – Dic. 2025",
         stack: ["C#", ".NET", "Entity Framework", "SQL Server"],
